@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnovativeSoftware", "InnovativeSoftware.csproj", "{F393D88B-6BAA-43A5-BF56-C5480D156EDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F393D88B-6BAA-43A5-BF56-C5480D156EDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F393D88B-6BAA-43A5-BF56-C5480D156EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F393D88B-6BAA-43A5-BF56-C5480D156EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F393D88B-6BAA-43A5-BF56-C5480D156EDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
