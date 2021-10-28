@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using InnovativeSoftware.Helpers;
 using InnovativeSoftware.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,10 +8,12 @@ namespace InnovativeSoftware.Controllers
     public class LightController : BaseApiController
     { 
         private readonly ILightService _lightService;
+        private readonly ParameterDescriptionAttribute _parameterDescription;
 
-        public LightController(ILightService lightService)
+        public LightController(ILightService lightService, ParameterDescriptionAttribute parameterDescription)
         {
             _lightService = lightService;
+            _parameterDescription = parameterDescription;
         }
 
         // GET

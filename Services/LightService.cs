@@ -9,8 +9,7 @@ namespace InnovativeSoftware.Services
         
         public Task<bool> TurnOffLights(int id)
         {
-            //What type of light 
-            //
+            
             throw new System.NotImplementedException();
         }
     }
