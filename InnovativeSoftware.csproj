@@ -10,8 +10,8 @@
 
     <ItemGroup>
       <Folder Include="Models" />
-      <Folder Include="Repositories" />
-      <Folder Include="Services" />
+      <Folder Include="Repositories\Clients" />
+      <Folder Include="Repositories\Models" />
     </ItemGroup>
 
 </Project>
