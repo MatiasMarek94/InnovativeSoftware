@@ -20,7 +20,8 @@ namespace InnovativeSoftware.Services
         {
             var result = await _elspotClient.GetPrice(DateTime.Now);
             var elspot = result.Result.Records.First();
-            return new ElectricityPrice { DateTime = elspot.HourDK, Dkk = elspot.SpotPriceDKK };
+            const string unit = "DKK / MWh";
+            return new ElectricityPrice { DateTime = elspot.HourDK, Price = elspot.SpotPriceDKK, Unit = unit };
         }
     }
 }

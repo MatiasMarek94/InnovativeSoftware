@@ -1,4 +1,5 @@
 using InnovativeSoftware.Repositories.Clients;
+using InnovativeSoftware.Services;
 using InnovativeSoftware.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,7 +30,7 @@ namespace InnovativeSoftware
 
             services.AddHttpClient<ElspotClient>();
 
-            services.AddTransient<IElectricityPriceService, IElectricityPriceService>();
+            services.AddTransient<IElectricityPriceService, ElectricityPriceService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
