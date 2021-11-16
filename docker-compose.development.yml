@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  InnovationBackend:
+    image: dstoft/inno-backend:latest
+    container_name: inno-backend
+    ports:
+      - "8080:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      TZ: Europe/Berlin
