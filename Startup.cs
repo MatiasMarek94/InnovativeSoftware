@@ -30,6 +30,16 @@ namespace InnovativeSoftware
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // allow all cors
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    // Any origin is allowed
+                    builder.AllowAnyMethod().AllowAnyHeader().SetIsOriginAllowed((host) => true).AllowCredentials();
+                });
+            });
+            
             services.AddControllers();
 
             services.AddSwaggerGen(c =>
@@ -62,13 +72,15 @@ namespace InnovativeSoftware
             }
 
             await UpdateDatabase(app, logger);
-
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.UseCors();
 
+            app.UseAuthorization();
+            
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
 
