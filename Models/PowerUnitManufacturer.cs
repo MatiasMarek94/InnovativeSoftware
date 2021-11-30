@@ -2,6 +2,7 @@
 {
     public enum PowerUnitManufacturer
     {
-        PhilipsHue
+        PhilipsHue,
+        Ikea
     }
 }
