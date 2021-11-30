@@ -57,6 +57,10 @@ namespace InnovativeSoftware
             services.AddTransient<ICo2EmissionRepository, Co2EmissionRepository>();
             services.AddHttpClient<Co2EmissionPrognosisClient>();
 
+            services.AddTransient<ILightService, LightService>();
+            services.AddTransient<IPhilipsHueRepository, PhilipsHueRepository>();
+            services.AddHttpClient<PhilipsHueClient>();
+
             services.AddTransient<IPowerUnitService, PowerUnitService>();
             services.AddTransient<IPowerUnitRepository, PowerUnitRepository>();
         }
